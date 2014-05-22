@@ -1,0 +1,31 @@
+<h1>Listing desafios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Desafio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @desafios.each do |desafio| %>
+      <tr>
+        <td><%= desafio.nome %></td>
+        <td><%= desafio.email %></td>
+        <td><%= desafio.desafio %></td>
+        <td><%= link_to 'Show', desafio %></td>
+        <td><%= link_to 'Edit', edit_desafio_path(desafio) %></td>
+        <td><%= link_to 'Destroy', desafio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Desafio', new_desafio_path %>

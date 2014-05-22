@@ -1,0 +1,29 @@
+<%= form_for(@desafio) do |f| %>
+  <% if @desafio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@desafio.errors.count, "error") %> prohibited this desafio from being saved:</h2>
+
+      <ul>
+      <% @desafio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :desafio %><br>
+    <%= f.text_area :desafio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @desafio.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @desafio.email %>
+</p>
+
+<p>
+  <strong>Desafio:</strong>
+  <%= @desafio.desafio %>
+</p>
+
+<%= link_to 'Edit', edit_desafio_path(@desafio) %> |
+<%= link_to 'Back', desafios_path %>
